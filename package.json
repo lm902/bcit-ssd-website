@@ -1,0 +1,28 @@
+{
+  "name": "bcit-ssd-website",
+  "version": "1.0.0",
+  "description": "The web site will be used by both current students and prospective students considering taking the program",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lm902/bcit-ssd-website.git"
+  },
+  "keywords": [
+    "bcit",
+    "ssd",
+    "program",
+    "school",
+    "computing",
+    "website",
+    "student"
+  ],
+  "author": "lm902",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lm902/bcit-ssd-website/issues"
+  },
+  "homepage": "https://github.com/lm902/bcit-ssd-website#readme"
+}
