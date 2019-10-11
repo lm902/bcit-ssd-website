@@ -34,7 +34,9 @@ export default class NavigationMenu extends LitElement {
     return css`
       :host {
         display: block;
-        background: #fcfcfc;
+        background: rgba(250, 250, 250, 0.95);
+        backdrop-filter: blur(4px);
+        height: 100%;
       }
       ul {
         margin: 0;
@@ -60,11 +62,6 @@ export default class NavigationMenu extends LitElement {
       }
       a.current {
         background: #ddd;
-      }
-      @media screen and (max-width: 499px) {
-        :host {
-          height: 100%;
-        }
       }
     `
   }

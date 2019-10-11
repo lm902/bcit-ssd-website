@@ -38,6 +38,7 @@ export default class AppHeader extends LitElement {
         background: rgba(250, 250, 250, 0.8);
         display: grid;
         height: 40px;
+        backdrop-filter: blur(3px);
       }
       h1 {
         font-size: 32px;
