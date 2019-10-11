@@ -1,9 +1,9 @@
 import { LitElement, html } from 'lit-element'
-import './components/app-layout.js'
-import './components/app-header.js'
-import './components/navigation-menu.js'
-import './components/app-content.js'
-import ActionRegistry from './ActionRegistry.js'
+import './components/app-layout'
+import './components/app-header'
+import './components/navigation-menu'
+import './components/app-content'
+import ActionRegistry from './ActionRegistry'
 
 export default class BcitSsdWebsiteApp extends LitElement {
   constructor () {

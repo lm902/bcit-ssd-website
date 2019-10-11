@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element'
-import ActionRegistry from '../ActionRegistry.js'
-import { pages } from '../config.js'
+import ActionRegistry from '../ActionRegistry'
+import { pages } from '../config'
 
 export default class AppHeader extends LitElement {
   connectedCallback () {

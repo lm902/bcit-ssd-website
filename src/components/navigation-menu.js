@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element'
 import { pages } from '../config'
-import ActionRegistry from '../ActionRegistry.js'
+import ActionRegistry from '../ActionRegistry'
 
 export default class NavigationMenu extends LitElement {
   render () {
