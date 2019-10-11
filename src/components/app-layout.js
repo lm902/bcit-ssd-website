@@ -32,7 +32,10 @@ export default class AppLayout extends LitElement {
       slot {
         display: block;
       }
-      #header, #menu {
+      #header {
+        z-index: 1001;
+      }
+      #menu {
         z-index: 1000;
       }
       @media screen and (min-width: 500px) {
@@ -42,10 +45,12 @@ export default class AppLayout extends LitElement {
         #header {
           grid-row: 1;
           grid-column: 1 / 3;
+          box-shadow: 0 0 3px #777;
         }
         #menu {
           grid-row: 2;
           grid-column: 1;
+          border-right: 1px solid #eee;
         }
         #content {
           grid-row: 1 / 3;
@@ -56,6 +61,7 @@ export default class AppLayout extends LitElement {
         #header {
           grid-row: 1;
           grid-column: 1;
+          box-shadow: 0 0 8px #777;
         }
         #menu {
           grid-row: 2;
