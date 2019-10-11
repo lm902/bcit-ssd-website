@@ -16,12 +16,11 @@ export default class NavigationMenu extends LitElement {
 
   connectedCallback () {
     super.connectedCallback()
-    setTimeout(() => this.updateActiveItem(true), 0)
-    window.app.actionRegistry.register(ActionRegistry.ActionType.MENU_BUTTON_INVOKE, this.toggle.bind(this))
+    setTimeout(() => this.updateActiveItem(), 0)
     window.app.actionRegistry.register(ActionRegistry.ActionType.BROWSER_NAVIGATION, this.updateActiveItem.bind(this))
   }
 
-  updateActiveItem (doNotToggle) {
+  updateActiveItem () {
     for (const a of this.shadowRoot.querySelectorAll('a')) {
       if (a.href === window.location.href) {
         a.classList.add('current')
@@ -29,11 +28,6 @@ export default class NavigationMenu extends LitElement {
         a.classList.remove('current')
       }
     }
-    if (!doNotToggle) { this.toggle() }
-  }
-
-  toggle () {
-    this.classList.toggle('show')
   }
 
   static get styles () {
@@ -41,7 +35,6 @@ export default class NavigationMenu extends LitElement {
       :host {
         display: block;
         background: #fcfcfc;
-        transition: transform 0.3s;
       }
       ul {
         margin: 0;
@@ -70,11 +63,7 @@ export default class NavigationMenu extends LitElement {
       }
       @media screen and (max-width: 499px) {
         :host {
-          transform: translateX(-100vw);
           height: 100%;
-        }
-        :host(.show) {
-          transform: none;
         }
       }
     `

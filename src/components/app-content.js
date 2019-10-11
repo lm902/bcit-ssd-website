@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit-element'
 import { pages } from '../config'
 import ActionRegistry from '../ActionRegistry'
+import '../pages/pages'
 
 export default class AppContent extends LitElement {
   render () {
@@ -12,6 +13,9 @@ export default class AppContent extends LitElement {
       :host {
         display: block;
         padding-top: 40px;
+        width: 100%;
+        height: calc(100% - 40px);
+        overflow: scroll;
       }
     `
   }
