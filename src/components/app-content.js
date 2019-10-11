@@ -12,7 +12,7 @@ export default class AppContent extends LitElement {
     return css`
       :host {
         display: block;
-        padding-top: 40px;
+        padding: 40px 0;
         width: 100%;
         height: calc(100% - 40px);
         overflow: scroll;

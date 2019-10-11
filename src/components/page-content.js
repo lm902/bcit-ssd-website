@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit-element'
+import { LitElement, html, css } from 'lit-element'
 
 export default class PageContent extends LitElement {
   render () {
@@ -9,4 +9,15 @@ export default class PageContent extends LitElement {
       </footer>
     `
   }
+
+  static get styles () {
+    return css`
+      :host {
+        display: block;
+        padding: 0 20px;
+      }
+    `
+  }
 }
+
+window.customElements.define('page-content', PageContent)
