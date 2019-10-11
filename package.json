@@ -15,7 +15,7 @@
     "wct-mocha": "^1.0.1"
   },
   "scripts": {
-    "test": "standard",
+    "test": "npx standard",
     "build": "npx polymer build --preset es6-bundled",
     "start": "npx polymer serve --open"
   },
