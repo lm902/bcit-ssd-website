@@ -14,7 +14,7 @@ export default class AppContent extends LitElement {
         display: block;
         padding: 40px 0;
         width: 100%;
-        height: calc(100% - 40px);
+        height: calc(100% - 80px);
         overflow: scroll;
       }
     `
