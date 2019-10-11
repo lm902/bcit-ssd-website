@@ -20,13 +20,6 @@ export default class AppLayout extends LitElement {
     this.shadowRoot.getElementById('menu').classList.toggle('show')
   }
 
-  static get properties () {
-    return {
-      routedata: { type: Object },
-      subroute: { type: Object }
-    }
-  }
-
   static get styles () {
     return css`
       :host {
