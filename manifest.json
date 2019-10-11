@@ -1,0 +1,7 @@
+{
+  "name": "bcit-ssd-website",
+  "short_name": "bcit-ssd-website",
+  "description": "The web site will be used by both current students and prospective students considering taking the program",
+  "start_url": "/",
+  "display": "standalone"
+}

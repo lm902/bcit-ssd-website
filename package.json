@@ -1,10 +1,23 @@
 {
   "name": "bcit-ssd-website",
-  "version": "1.0.0",
   "description": "The web site will be used by both current students and prospective students considering taking the program",
-  "main": "index.js",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0"
+  },
+  "devDependencies": {
+    "@polymer/test-fixture": "^4.0.2",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "chai": "^4.2.0",
+    "lit-element": "^2.2.1",
+    "mocha": "^6.1.4",
+    "polymer-cli": "^1.9.11",
+    "standard": "^14.3.1",
+    "wct-mocha": "^1.0.1"
+  },
   "scripts": {
-    "test": "standard"
+    "test": "standard",
+    "build": "npx polymer build --preset es6-bundled",
+    "start": "npx polymer serve --open"
   },
   "repository": {
     "type": "git",
