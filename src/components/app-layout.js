@@ -29,6 +29,9 @@ export default class AppLayout extends LitElement {
         grid-template-rows: 40px 1fr;
         touch-action: manipulation;
       }
+      * {
+        font-family: sans-serif;
+      }
       slot {
         display: block;
       }
