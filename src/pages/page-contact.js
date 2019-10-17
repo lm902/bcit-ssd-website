@@ -34,13 +34,13 @@ export default class PageContact extends LitElement {
           <mwc-button id="submit" @click=${this.submitForm}>Send</mwc-button>
         </div>
       </paper-card>
-      <mwc-dialog id="success" heading="Thank you" @closed=${this.dialogClosed}>
+      <mwc-dialog id="success" title="Thank you" @closed=${this.dialogClosed}>
         <div>We have received your information and will contact you shortly.</div>
         <mwc-button slot="primaryAction" dialogAction="ok">
           ok
         </mwc-button>
       </mwc-dialog>
-      <mwc-dialog id="fail" heading="Error" @closed=${this.dialogClosed}>
+      <mwc-dialog id="fail" title="Error" @closed=${this.dialogClosed}>
         <div>We have encountered an unexpected error, please try again later.</div>
         <mwc-button slot="primaryAction" dialogAction="ok">
           ok
@@ -77,7 +77,7 @@ export default class PageContact extends LitElement {
   }
 
   showResultSuccess (data) {
-    this.shadowRoot.getElementById('success').heading = 'Thank you, ' + data.firstname
+    this.shadowRoot.getElementById('success').title = 'Thank you, ' + data.firstname
     this.showResult('success')
   }
 
