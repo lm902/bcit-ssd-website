@@ -6,6 +6,7 @@
   },
   "devDependencies": {
     "@material/mwc-button": "^0.10.0",
+    "@material/mwc-checkbox": "^0.10.0",
     "@material/mwc-dialog": "^0.10.0",
     "@material/mwc-formfield": "^0.10.0",
     "@material/mwc-radio": "^0.10.0",
