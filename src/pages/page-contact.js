@@ -6,6 +6,7 @@ import '@material/mwc-button'
 import '@material/mwc-radio'
 import '@material/mwc-textarea'
 import '@material/mwc-dialog'
+import '@material/mwc-formfield'
 import '../components/page-content'
 
 export default class PageContact extends LitElement {
@@ -20,15 +21,15 @@ export default class PageContact extends LitElement {
             <mwc-textfield id="phone" type="tel" fullwidth placeholder="Phone number" helper="+15550123456" pattern="\\+\\d+" validationMessage="The phone number entered is not valid"></mwc-textfield>
             <div id="status-container">
               <h3>Your status</h3>
-              <div>
-                <mwc-radio checked name="status" id="currentstudent" value="Current Student"></mwc-radio><label for="currentstudent">Current Student</label>
-              </div>
-              <div>
-                <mwc-radio name="status" id="prospectivestudent" value="Prospective Student"></mwc-radio><label for="prospectivestudent">Prospective Student</label>
-              </div>
-              <div>
-                <mwc-radio name="status" id="instructor" value="Instructor"></mwc-radio><label for="instructor">Instructor</label>
-              </div>
+              <mwc-formfield label="Current Student">
+                <mwc-radio checked name="status" id="currentstudent" value="Current Student"></mwc-radio>
+              </mwc-formfield>
+              <mwc-formfield label="Prospective Student">
+                <mwc-radio name="status" id="prospectivestudent" value="Prospective Student"></mwc-radio>
+                </mwc-formfield>
+              <mwc-formfield label="Instructor">
+                <mwc-radio name="status" id="instructor" value="Instructor"></mwc-radio>
+              </mwc-formfield>
             </div>
             <mwc-textarea id="message" fullwidth placeholder="Message" required validationMessage="Message cannot be blank"></mwc-textarea>
           </form>
