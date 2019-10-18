@@ -5,46 +5,49 @@ import '@material/mwc-button'
 import '@material/mwc-radio'
 import '@material/mwc-textarea'
 import '@material/mwc-dialog'
+import '../components/page-content'
 
 export default class PageContact extends LitElement {
   render () {
     return html`
-      <paper-card heading="Contact Us">
-        <form class="card-content">
-          <mwc-textfield id="firstname" fullwidth placeholder="First name" required validationMessage="This field is required"></mwc-textfield>
-          <mwc-textfield id="lastname" fullwidth placeholder="Last name" required validationMessage="This field is required"></mwc-textfield>
-          <mwc-textfield id="email" type="email" fullwidth placeholder="Email" required validationMessage="You must enter an email address" helper="someone@example.com"></mwc-textfield>
-          <mwc-textfield id="phone" type="tel" fullwidth placeholder="Phone number" helper="+15550123456" pattern="\\+\\d+" validationMessage="The phone number entered is not valid"></mwc-textfield>
-          <div id="status-container">
-            <h3>Your status</h3>
-            <div>
-              <mwc-radio checked name="status" id="currentstudent" value="Current Student"></mwc-radio><label for="currentstudent">Current Student</label>
+      <page-content>
+        <paper-card heading="Contact Us">
+          <form class="card-content">
+            <mwc-textfield id="firstname" fullwidth placeholder="First name" required validationMessage="This field is required"></mwc-textfield>
+            <mwc-textfield id="lastname" fullwidth placeholder="Last name" required validationMessage="This field is required"></mwc-textfield>
+            <mwc-textfield id="email" type="email" fullwidth placeholder="Email" required validationMessage="You must enter an email address" helper="someone@example.com"></mwc-textfield>
+            <mwc-textfield id="phone" type="tel" fullwidth placeholder="Phone number" helper="+15550123456" pattern="\\+\\d+" validationMessage="The phone number entered is not valid"></mwc-textfield>
+            <div id="status-container">
+              <h3>Your status</h3>
+              <div>
+                <mwc-radio checked name="status" id="currentstudent" value="Current Student"></mwc-radio><label for="currentstudent">Current Student</label>
+              </div>
+              <div>
+                <mwc-radio name="status" id="prospectivestudent" value="Prospective Student"></mwc-radio><label for="prospectivestudent">Prospective Student</label>
+              </div>
+              <div>
+                <mwc-radio name="status" id="instructor" value="Instructor"></mwc-radio><label for="instructor">Instructor</label>
+              </div>
             </div>
-            <div>
-              <mwc-radio name="status" id="prospectivestudent" value="Prospective Student"></mwc-radio><label for="prospectivestudent">Prospective Student</label>
-            </div>
-            <div>
-              <mwc-radio name="status" id="instructor" value="Instructor"></mwc-radio><label for="instructor">Instructor</label>
-            </div>
+            <mwc-textarea id="message" fullwidth placeholder="Message" required validationMessage="Message cannot be blank"></mwc-textarea>
+          </form>
+          <div class="card-actions">
+            <mwc-button id="submit" @click=${this.submitForm}>Send</mwc-button>
           </div>
-          <mwc-textarea id="message" fullwidth placeholder="Message" required validationMessage="Message cannot be blank"></mwc-textarea>
-        </form>
-        <div class="card-actions">
-          <mwc-button id="submit" @click=${this.submitForm}>Send</mwc-button>
-        </div>
-      </paper-card>
-      <mwc-dialog id="success" heading="Thank you">
-        <div>We have received your information and will contact you shortly.</div>
-        <mwc-button slot="primaryAction" dialogAction="ok">
-          ok
-        </mwc-button>
-      </mwc-dialog>
-      <mwc-dialog id="fail" heading="Error">
-        <div>We have encountered an unexpected error, please try again later.</div>
-        <mwc-button slot="primaryAction" dialogAction="ok">
-          ok
-        </mwc-button>
-      </mwc-dialog>
+        </paper-card>
+        <mwc-dialog id="success" heading="Thank you">
+          <div>We have received your information and will contact you shortly.</div>
+          <mwc-button slot="primaryAction" dialogAction="ok">
+            ok
+          </mwc-button>
+        </mwc-dialog>
+        <mwc-dialog id="fail" heading="Error">
+          <div>We have encountered an unexpected error, please try again later.</div>
+          <mwc-button slot="primaryAction" dialogAction="ok">
+            ok
+          </mwc-button>
+        </mwc-dialog>
+      </page-content>
     `
   }
 

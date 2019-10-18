@@ -41,7 +41,7 @@ export default class AppLayout extends LitElement {
       #menu {
         z-index: 1000;
       }
-      @media screen and (min-width: 500px) {
+      @media screen and (min-width: 800px) {
         :host {
           grid-template-columns: 300px 1fr;
         }
@@ -60,7 +60,7 @@ export default class AppLayout extends LitElement {
           grid-column: 2;
         }
       }
-      @media screen and (max-width: 499px) {
+      @media screen and (max-width: 799px) {
         #header {
           grid-row: 1;
           grid-column: 1;

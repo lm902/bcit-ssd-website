@@ -53,7 +53,7 @@ export default class AppHeader extends LitElement {
         width: 40px;
         height: 40px;
       }
-      @media screen and (min-width: 500px) {
+      @media screen and (min-width: 800px) {
         a {
           display: none;
         }
