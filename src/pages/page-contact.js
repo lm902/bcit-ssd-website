@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit-element'
+import ActionRegistry from '../ActionRegistry'
 import '@polymer/paper-card'
 import '@material/mwc-textfield'
 import '@material/mwc-button'
@@ -35,13 +36,13 @@ export default class PageContact extends LitElement {
             <mwc-button id="submit" @click=${this.submitForm}>Send</mwc-button>
           </div>
         </paper-card>
-        <mwc-dialog id="success" heading="Thank you">
+        <mwc-dialog id="success" title="Thank you" @closed=${this.dialogClosed}>
           <div>We have received your information and will contact you shortly.</div>
           <mwc-button slot="primaryAction" dialogAction="ok">
             ok
           </mwc-button>
         </mwc-dialog>
-        <mwc-dialog id="fail" heading="Error">
+        <mwc-dialog id="fail" title="Error" @closed=${this.dialogClosed}>
           <div>We have encountered an unexpected error, please try again later.</div>
           <mwc-button slot="primaryAction" dialogAction="ok">
             ok
@@ -75,15 +76,20 @@ export default class PageContact extends LitElement {
   showResult (status) {
     this.shadowRoot.getElementById('submit').disabled = undefined
     this.shadowRoot.getElementById(status).open = 'open'
+    window.app.actionRegistry.dispatch(ActionRegistry.ActionType.GLOBAL_DIALOG_OPEN)
   }
 
   showResultSuccess (data) {
-    this.shadowRoot.getElementById('success').heading = 'Thank you, ' + data.firstname
+    this.shadowRoot.getElementById('success').title = 'Thank you, ' + data.firstname
     this.showResult('success')
   }
 
   showResultFail (data) {
     this.showResult('fail')
+  }
+
+  dialogClosed () {
+    window.app.actionRegistry.dispatch(ActionRegistry.ActionType.GLOBAL_DIALOG_CLOSE)
   }
 
   static get styles () {

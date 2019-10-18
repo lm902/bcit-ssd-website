@@ -14,10 +14,20 @@ export default class AppLayout extends LitElement {
     super.connectedCallback()
     window.app.actionRegistry.register(ActionRegistry.ActionType.BROWSER_NAVIGATION, this.toggleMenu.bind(this))
     window.app.actionRegistry.register(ActionRegistry.ActionType.MENU_BUTTON_INVOKE, this.toggleMenu.bind(this))
+    window.app.actionRegistry.register(ActionRegistry.ActionType.GLOBAL_DIALOG_OPEN, this.dialogOpen.bind(this))
+    window.app.actionRegistry.register(ActionRegistry.ActionType.GLOBAL_DIALOG_CLOSE, this.dialogClose.bind(this))
   }
 
   toggleMenu () {
     this.shadowRoot.getElementById('menu').classList.toggle('show')
+  }
+
+  dialogOpen () {
+    this.shadowRoot.getElementById('menu').classList.add('low')
+  }
+
+  dialogClose () {
+    this.shadowRoot.getElementById('menu').classList.remove('low')
   }
 
   static get styles () {
@@ -40,6 +50,7 @@ export default class AppLayout extends LitElement {
       }
       #menu {
         z-index: 1000;
+        transition: right 0.3s;
       }
       @media screen and (min-width: 800px) {
         :host {
@@ -54,6 +65,9 @@ export default class AppLayout extends LitElement {
           grid-row: 2;
           grid-column: 1;
           border-right: 1px solid #eee;
+        }
+        #menu.low {
+          z-index: -1;
         }
         #content {
           grid-row: 1 / 3;
@@ -72,7 +86,6 @@ export default class AppLayout extends LitElement {
           position: relative;
           right: 100vw;
           height: 100%;
-          transition: right 0.3s;
         }
         #menu.show {
           right: 0;

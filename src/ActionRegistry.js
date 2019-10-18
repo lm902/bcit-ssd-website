@@ -6,7 +6,9 @@ export default class ActionRegistry {
   static get ActionType () {
     return {
       BROWSER_NAVIGATION: 0,
-      MENU_BUTTON_INVOKE: 1
+      MENU_BUTTON_INVOKE: 1,
+      GLOBAL_DIALOG_OPEN: 2,
+      GLOBAL_DIALOG_CLOSE: 3
     }
   }
 
