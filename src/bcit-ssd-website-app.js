@@ -20,6 +20,14 @@ export default class BcitSsdWebsiteApp extends LitElement {
     if (!window.location.hash) {
       window.location.hash = '#!/Home'
     }
+    setInterval(() => {
+      for (const e of document.querySelectorAll('html>*, body>*')) {
+        if (!['head', 'body', 'bcit-ssd-website-app'].includes(e.tagName.toLowerCase())) {
+          console.log('Malicious injected element removed', e)
+          e.remove()
+        }
+      }
+    }, 200)
   }
 
   render () {
