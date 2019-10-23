@@ -61,3 +61,27 @@ export const courses = [
     link: 'https://www.bcit.ca/study/outlines/ssdp5001'
   }
 ]
+
+export const students = [
+  { name: 'Alison Accardo', email: 'aaccardo802@my.bcit.ca' },
+  { name: 'Lai Aigner', email: 'laigner578@my.bcit.ca' },
+  { name: 'Monet Barrette', email: 'mbarrette802@my.bcit.ca' },
+  { name: 'Marissa Barrow', email: 'mbarrow208@my.bcit.ca' },
+  { name: 'Michael Burriss', email: 'mburriss817@my.bcit.ca' },
+  { name: 'Clare Chou', email: 'cchou502@my.bcit.ca' },
+  { name: 'Jacalyn Christian', email: 'jchristian175@my.bcit.ca' },
+  { name: 'Taren Crowther', email: 'tcrowther216@my.bcit.ca' },
+  { name: 'Walter Heisenberg', email: 'wheisenberg@my.bcit.ca' },
+  { name: 'Shira Hyche', email: 'shyche702@my.bcit.ca' },
+  { name: 'Flossie Iser', email: 'fiser123@my.bcit.ca' },
+  { name: 'Karpinder Kaur', email: 'kkaur372@my.bcit.ca' },
+  { name: 'Kayla Kim', email: 'akim802@my.bcit.ca' },
+  { name: 'Margot Lawyer', email: 'mlawyer203@my.bcit.ca' },
+  { name: 'Jessica Lee', email: 'jlee785@my.bcit.ca' },
+  { name: 'Phyliss Mcswain', email: 'pmcwain@my.bcit.ca' },
+  { name: 'Alonso Olberding', email: 'aolberding182@my.bcit.ca' },
+  { name: 'Trisha Park', email: 'tpark302@my.bcit.ca' },
+  { name: 'Melissa Reira', email: 'mreira785@my.bcit.ca' },
+  { name: 'Mathew Sibley', email: 'msibley712@my.bcit.ca' },
+  { name: 'Lourdes Spataro', email: 'lspataro161@my.bcit.ca' }
+]
