@@ -2,9 +2,6 @@
   "name": "bcit-ssd-website",
   "description": "The web site will be used by both current students and prospective students considering taking the program",
   "dependencies": {
-    "@polymer/polymer": "^3.0.0"
-  },
-  "devDependencies": {
     "@material/mwc-button": "^0.10.0",
     "@material/mwc-checkbox": "^0.10.0",
     "@material/mwc-dialog": "^0.10.0",
@@ -14,14 +11,13 @@
     "@material/mwc-textarea": "^0.10.0",
     "@material/mwc-textfield": "^0.10.0",
     "@polymer/paper-card": "^3.0.1",
-    "@polymer/test-fixture": "^4.0.2",
+    "@polymer/polymer": "^3.0.0",
     "@webcomponents/webcomponentsjs": "^2.0.0",
-    "chai": "^4.2.0",
     "lit-element": "^2.2.1",
-    "mocha": "^6.1.4",
-    "polymer-cli": "^1.9.11",
-    "standard": "^14.3.1",
-    "wct-mocha": "^1.0.1"
+    "polymer-cli": "^1.9.11"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
   },
   "scripts": {
     "test": "npx standard",
