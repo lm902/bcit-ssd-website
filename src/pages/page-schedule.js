@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element'
 import '@material/mwc-formfield'
-import '@material/mwc-checkbox'
 import '@material/mwc-radio'
+import '@material/mwc-fab'
 import '../components/page-content'
 import '../components/schedule/schedule-calendar'
 
@@ -15,23 +15,26 @@ export default class PageSchedule extends LitElement {
         <mwc-formfield label="Set B">
           <mwc-radio name="set" value="setB" @change=${this.changeSet.bind(this)}></mwc-radio>
         </mwc-formfield>
-        <mwc-formfield label="Calendar view">
-          <mwc-checkbox checked @change=${this.toggleCalendarView.bind(this)}></mwc-checkbox>
-        </mwc-formfield>
-        <schedule-calendar set="setA" view="calendar"></schedule-calendar>
+        <mwc-fab extended @click=${this.toggleCalendarView.bind(this)} icon="${this.calendarView ? 'calendar_today' : 'list_alt'}" label="${this.calendarView ? 'Calendar' : 'List'}"></mwc-fab>
+        <schedule-calendar set="setA" view="${this.calendarView ? 'calendar' : 'list'}"></schedule-calendar>
       </page-content>
     `
   }
 
   static get styles () {
     return css`
-      @media screen and (max-width: 949px) {
-        mwc-formfield[label="Calendar view"] {
+      @media screen and (max-width: 999px) {
+        mwc-fab {
           display: none;
         }
       }
       mwc-radio {
         transform: translateY(2px);
+      }
+      mwc-fab {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
       }
     `
   }
@@ -42,12 +45,19 @@ export default class PageSchedule extends LitElement {
     }
   }
 
-  toggleCalendarView (event) {
-    this.shadowRoot.querySelector('schedule-calendar').view = event.target.checked ? 'calendar' : 'list'
+  toggleCalendarView () {
+    this.changeCalendarView(!this.calendarView)
+  }
+
+  changeCalendarView (target) {
+    console.log('Change calendar view to ' + target)
+    this.calendarView = target
+    this.requestUpdate()
   }
 
   connectedCallback () {
     super.connectedCallback()
+    this.calendarView = true
     this.bindedResize = this.resize.bind(this)
     window.addEventListener('resize', this.bindedResize)
   }
@@ -58,9 +68,8 @@ export default class PageSchedule extends LitElement {
   }
 
   resize () {
-    if (window.innerWidth < 950) {
-      this.shadowRoot.querySelector('mwc-checkbox').checked = false
-      this.shadowRoot.querySelector('mwc-checkbox').dispatchEvent(new window.Event('change'))
+    if (window.innerWidth < 1000 && this.calendarView) {
+      this.changeCalendarView(false)
     }
   }
 }

@@ -3,7 +3,6 @@
   "description": "The web site will be used by both current students and prospective students considering taking the program",
   "dependencies": {
     "@material/mwc-button": "^0.10.0",
-    "@material/mwc-checkbox": "^0.10.0",
     "@material/mwc-dialog": "^0.10.0",
     "@material/mwc-formfield": "^0.10.0",
     "@material/mwc-icon": "^0.10.0",
@@ -17,6 +16,7 @@
     "polymer-cli": "^1.9.11"
   },
   "devDependencies": {
+    "@material/mwc-fab": "^0.10.0",
     "standard": "^14.3.1"
   },
   "scripts": {
