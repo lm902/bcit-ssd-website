@@ -85,3 +85,18 @@ export const students = [
   { name: 'Mathew Sibley', email: 'msibley712@my.bcit.ca' },
   { name: 'Lourdes Spataro', email: 'lspataro161@my.bcit.ca' }
 ]
+
+export const facultyStaffs = [
+  {
+    name: 'Phil Weier',
+    email: 'pweier@my.bcit.ca',
+    courses: ['Orientation', 'System Analysis & Design', 'Relational Databases',
+      'C# - OOP', '.NET Core - MVC', 'Portfolio Site Presentation',
+      '.NET Core Web API', 'iOS', 'Android', 'Passion Project', 'Final Project',
+      'Mock Interviews', 'Industry Projects', 'Demo Day', 'Mobile Project'],
+    social: [
+      { name: 'GitHub', url: 'https://github.com/philweier' },
+      { name: 'Meetup', url: 'https://www.meetup.com/members/147637372/' }
+    ]
+  }
+]
