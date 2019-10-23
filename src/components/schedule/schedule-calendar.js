@@ -35,26 +35,24 @@ export default class ScheduleCalendar extends LitElement {
               </tr>
             </thead>
             <tbody>
-              ${rows.map(row => {
-                return html`
+              ${rows.map(row => html`
                   <tr>
                     ${row.map(col => html`<td>${col.map(line => line && html`<span>${line}</span><br />`)}</td>`)}
                   </tr>
                 `
-              })}
+              )}
             </tbody>
           </table>
         `
       case 'list':
         return html`
           <table class="list">
-            ${schedule[this.set].map(row => {
-              return html`
+            ${schedule[this.set].map(row => html`
                 <tr>
                   <td>${row.map(line => line && html`<span>${line}</span><br />`)}</td>
                 </tr>
               `
-            })}
+            )}
           </table>
         `
     }
