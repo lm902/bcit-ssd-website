@@ -1,4 +1,5 @@
 import './page-home'
 import './page-schedule'
+import './page-students'
 import './page-courses-overview'
 import './page-contact'
