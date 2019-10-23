@@ -40,7 +40,7 @@ export default class AppLayout extends LitElement {
         touch-action: manipulation;
       }
       * {
-        font-family: sans-serif;
+        font-family: Roboto;
       }
       header {
         z-index: 1001;
