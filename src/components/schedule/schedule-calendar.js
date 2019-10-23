@@ -36,11 +36,10 @@ export default class ScheduleCalendar extends LitElement {
             </thead>
             <tbody>
               ${rows.map(row => html`
-                  <tr>
-                    ${row.map(col => html`<td>${col.map(line => line && html`<span>${line}</span><br />`)}</td>`)}
-                  </tr>
-                `
-              )}
+                <tr>
+                  ${row.map(col => html`<td>${col.map(line => line && html`<span>${line}</span><br />`)}</td>`)}
+                </tr>
+              `)}
             </tbody>
           </table>
         `
@@ -48,11 +47,10 @@ export default class ScheduleCalendar extends LitElement {
         return html`
           <table class="list">
             ${schedule[this.set].map(row => html`
-                <tr>
-                  <td>${row.map(line => line && html`<span>${line}</span><br />`)}</td>
-                </tr>
-              `
-            )}
+              <tr>
+                <td>${row.map(line => line && html`<span>${line}</span><br />`)}</td>
+              </tr>
+            `)}
           </table>
         `
     }
