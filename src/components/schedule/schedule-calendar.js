@@ -60,6 +60,7 @@ export default class ScheduleCalendar extends LitElement {
     return css`
       table {
         border-spacing: 0;
+        box-shadow: 0 0 3px #777;
       }
       table.list {
         width: 100%;
