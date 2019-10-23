@@ -4,9 +4,9 @@ import ActionRegistry from '../ActionRegistry'
 export default class AppLayout extends LitElement {
   render () {
     return html`
-      <slot name="header" id="header"></slot>
-      <slot name="menu" id="menu"></slot>
-      <slot name="content" id="content"></slot>
+      <header><slot name="header"></slot></header>
+      <nav><slot name="menu"></slot></nav>
+      <main><slot name="content"></slot></main>
     `
   }
 
@@ -19,15 +19,15 @@ export default class AppLayout extends LitElement {
   }
 
   toggleMenu () {
-    this.shadowRoot.getElementById('menu').classList.toggle('show')
+    this.shadowRoot.querySelector('nav').classList.toggle('show')
   }
 
   dialogOpen () {
-    this.shadowRoot.getElementById('menu').classList.add('low')
+    this.shadowRoot.querySelector('nav').classList.add('low')
   }
 
   dialogClose () {
-    this.shadowRoot.getElementById('menu').classList.remove('low')
+    this.shadowRoot.querySelector('nav').classList.remove('low')
   }
 
   static get styles () {
@@ -42,13 +42,10 @@ export default class AppLayout extends LitElement {
       * {
         font-family: sans-serif;
       }
-      slot {
-        display: block;
-      }
-      #header {
+      header {
         z-index: 1001;
       }
-      #menu {
+      nav {
         z-index: 1000;
         transition: right 0.3s;
       }
@@ -56,41 +53,41 @@ export default class AppLayout extends LitElement {
         :host {
           grid-template-columns: 300px 1fr;
         }
-        #header {
+        header {
           grid-row: 1;
           grid-column: 1 / 3;
           box-shadow: 0 0 3px #777;
         }
-        #menu {
+        nav {
           grid-row: 2;
           grid-column: 1;
           border-right: 1px solid #eee;
         }
-        #menu.low {
+        nav.low {
           z-index: -1;
         }
-        #content {
+        main {
           grid-row: 1 / 3;
           grid-column: 2;
         }
       }
       @media screen and (max-width: 799px) {
-        #header {
+        header {
           grid-row: 1;
           grid-column: 1;
           box-shadow: 0 0 8px #777;
         }
-        #menu {
+        nav {
           grid-row: 2;
           grid-column: 1;
           position: relative;
           right: 100vw;
           height: 100%;
         }
-        #menu.show {
+        nav.show {
           right: 0;
         }
-        #content {
+        main {
           grid-row: 1 / 3;
           grid-column: 1;
         }
