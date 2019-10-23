@@ -74,7 +74,7 @@ export default class ScheduleCalendar extends LitElement {
         height: 90px;
       }
       td span:first-child {
-        font-weight: bold;
+        font-weight: 500;
       }
     `
   }

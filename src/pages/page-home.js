@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit-element'
+import { LitElement, html, css } from 'lit-element'
 import '../components/page-content'
 
 export default class PageHome extends LitElement {
@@ -49,6 +49,18 @@ export default class PageHome extends LitElement {
           </tbody>
         </table>
       </page-content>
+    `
+  }
+
+  static get styles () {
+    return css`
+      * {
+        font-weight: normal;
+      }
+      a {
+        text-decoration: none;
+        color: var(--primary-color);
+      }
     `
   }
 }
