@@ -30,6 +30,9 @@ export default class PageSchedule extends LitElement {
           display: none;
         }
       }
+      mwc-radio {
+        transform: translateY(2px);
+      }
     `
   }
 
