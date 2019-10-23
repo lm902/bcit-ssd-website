@@ -45,12 +45,13 @@ export default class PageSchedule extends LitElement {
 
   connectedCallback () {
     super.connectedCallback()
-    window.addEventListener('resize', this.resize.bind(this))
+    this.bindedResize = this.resize.bind(this)
+    window.addEventListener('resize', this.bindedResize)
   }
 
   disconnectedCallback () {
     super.disconnectedCallback()
-    window.removeEventListener('resize')
+    window.removeEventListener('resize', this.bindedResize)
   }
 
   resize () {
