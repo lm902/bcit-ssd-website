@@ -171,3 +171,31 @@ export const administrativeStaffs = [
     ]
   }
 ]
+
+export const eResources = [
+  {
+    name: 'MDN Web Docs',
+    description: 'Resources for developers, by developers.',
+    link: 'https://developer.mozilla.org/'
+  },
+  {
+    name: 'w3schools.com',
+    description: 'W3Schools is a web developers site, with tutorials and references on web development languages such as HTML, CSS, JavaScript, PHP, SQL, Python, jQuery, Java, W3.CSS, and Bootstrap, covering most aspects of web programming.',
+    link: 'https://www.w3schools.com/'
+  },
+  {
+    name: 'WHATWG',
+    description: 'The Web Hypertext Application Technology Working Group (WHATWG) is a community of people interested in evolving the web through standards and tests.',
+    link: 'https://whatwg.org/'
+  },
+  {
+    name: 'Microsoft Docs',
+    description: 'docs.microsoft.com is the home for Microsoft documentation for end users, developers, and IT professionals. Check out our quickstarts, tutorials, API reference, and code examples.',
+    link: 'https://docs.microsoft.com/'
+  },
+  {
+    name: 'Stack Overflow',
+    description: 'Stack Overflow is an open community for anyone that codes. We help you get answers to your toughest coding questions, share knowledge with your coworkers in private, and find your next dream job.',
+    link: 'https://stackoverflow.com/'
+  }
+]
