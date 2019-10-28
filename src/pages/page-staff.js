@@ -2,12 +2,23 @@ import { LitElement, html, css } from 'lit-element'
 import '@polymer/paper-card'
 import '@material/mwc-icon'
 import '../components/page-content'
-import { facultyStaffs } from '../config'
+import { facultyStaffs, administrativeStaffs } from '../config'
 
 export default class PageStaff extends LitElement {
   render () {
     return html`
       <page-content>
+        <h1>Administrative Staffs</h1>
+        ${administrativeStaffs.map(staff => html`
+          <paper-card heading="${staff.name}">
+            <a class="card-content" href="mailto:${staff.email}"><mwc-icon>email</mwc-icon>${staff.email}</a>
+            <br />
+            ${staff.social.map(social => html`
+              <a class="card-content" href="${social.url}"><mwc-icon>share</mwc-icon>${social.name}</a>
+            `)}
+            <br />
+          </paper-card>
+        `)}
         <h1>Faculty Staffs</h1>
         ${facultyStaffs.map(staff => html`
           <paper-card heading="${staff.name}">

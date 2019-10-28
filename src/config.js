@@ -151,3 +151,23 @@ export const facultyStaffs = [
     ]
   }
 ]
+
+export const administrativeStaffs = [
+  {
+    name: 'Yoonie Cho',
+    email: 'Yoonie_cho@bcit.ca',
+    social: [
+      {
+        name: 'LinkedIn', url: 'https://www.linkedin.com/in/yooniecho/'
+      }
+    ]
+  },
+  {
+    name: 'Pat McGee',
+    email: 'Pat_Mcgee@bcit.ca',
+    social: [
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/patmcgee/' },
+      { name: 'GitHub', url: 'https://github.com/patrickwmcgee' }
+    ]
+  }
+]
