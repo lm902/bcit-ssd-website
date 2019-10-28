@@ -97,9 +97,7 @@ export default class PageContact extends LitElement {
     return css`
       paper-card {
         margin: 20px;
-        width: -moz-fill-available;
-        width: -webkit-fill-available;
-        width: fill-available;
+        width: calc(100% - 40px);
         max-width: 700px;
       }
 
