@@ -98,5 +98,56 @@ export const facultyStaffs = [
       { name: 'GitHub', url: 'https://github.com/philweier' },
       { name: 'Meetup', url: 'https://www.meetup.com/members/147637372/' }
     ]
+  },
+  {
+    name: 'Alex Cooper',
+    email: 'acooper35@my.bcit.ca',
+    courses: ['Orientation', 'System Analysis & Design', 'Frontend Project',
+      'Angular', 'React', 'Portfolio Site Presentation',
+      'AWS', 'X-Platform Mobile', 'Passion Project', 'Final Project',
+      'Mock Interviews', 'Industry Projects', 'Demo Day', 'Mobile Project'],
+    social: [
+      { name: 'GitHub', url: 'https://github.com/alexcooper' }
+    ]
+  },
+  {
+    name: 'Michael Whyte',
+    email: 'Michael_Whyte@bcit.ca',
+    courses: ['HTML5/CSS3', 'Frontend Project', 'iOS'],
+    social: [
+      { name: 'Twitter', url: 'https://twitter.com/bcitjason' }
+    ]
+  },
+  {
+    name: 'Jason Harrison',
+    email: 'Jason_Harrison@bcit.ca',
+    courses: ['Javascript', 'Laravel', 'React'],
+    social: [
+      { name: 'GitHub', url: 'https://github.com/michaelwhyte' }
+    ]
+  },
+  {
+    name: 'Jeff Parker',
+    email: 'Jeff_Parker@bcit.ca',
+    courses: ['PHP'],
+    social: [
+      { name: 'GitHub', url: 'https://github.com/jeffdparker' }
+    ]
+  },
+  {
+    name: 'Medhat Elmasry',
+    email: 'Medhat_Elmasry@bcit.ca',
+    courses: ['Full-Stack JS'],
+    social: [
+      { name: 'GitHub', url: 'https://github.com/medhatelmasry' }
+    ]
+  },
+  {
+    name: 'Marlene Delanghe',
+    email: 'Marlene_Delanghe@bcit.ca',
+    courses: ['Orientation', 'Presentation Skills', 'Resume Writing Essentials', 'Interview Skills', 'Mock Interviews'],
+    social: [
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/marlenedelanghe/' }
+    ]
   }
 ]
