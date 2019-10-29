@@ -172,30 +172,72 @@ export const administrativeStaffs = [
   }
 ]
 
-export const eResources = [
-  {
-    name: 'MDN Web Docs',
-    description: 'Resources for developers, by developers.',
-    link: 'https://developer.mozilla.org/'
-  },
-  {
-    name: 'w3schools.com',
-    description: 'W3Schools is a web developers site, with tutorials and references on web development languages such as HTML, CSS, JavaScript, PHP, SQL, Python, jQuery, Java, W3.CSS, and Bootstrap, covering most aspects of web programming.',
-    link: 'https://www.w3schools.com/'
-  },
-  {
-    name: 'WHATWG',
-    description: 'The Web Hypertext Application Technology Working Group (WHATWG) is a community of people interested in evolving the web through standards and tests.',
-    link: 'https://whatwg.org/'
-  },
-  {
-    name: 'Microsoft Docs',
-    description: 'docs.microsoft.com is the home for Microsoft documentation for end users, developers, and IT professionals. Check out our quickstarts, tutorials, API reference, and code examples.',
-    link: 'https://docs.microsoft.com/'
-  },
-  {
-    name: 'Stack Overflow',
-    description: 'Stack Overflow is an open community for anyone that codes. We help you get answers to your toughest coding questions, share knowledge with your coworkers in private, and find your next dream job.',
-    link: 'https://stackoverflow.com/'
-  }
-]
+export const eResources =
+{
+  Docs: [
+    {
+      name: 'MDN Web Docs',
+      description: 'Resources for developers, by developers.',
+      link: 'https://developer.mozilla.org/'
+    },
+    {
+      name: 'w3schools.com',
+      description: 'W3Schools is a web developers site, with tutorials and references on web development languages such as HTML, CSS, JavaScript, PHP, SQL, Python, jQuery, Java, W3.CSS, and Bootstrap, covering most aspects of web programming.',
+      link: 'https://www.w3schools.com/'
+    },
+    {
+      name: 'WHATWG',
+      description: 'The Web Hypertext Application Technology Working Group (WHATWG) is a community of people interested in evolving the web through standards and tests.',
+      link: 'https://whatwg.org/'
+    },
+    {
+      name: 'Microsoft Docs',
+      description: 'docs.microsoft.com is the home for Microsoft documentation for end users, developers, and IT professionals. Check out our quickstarts, tutorials, API reference, and code examples.',
+      link: 'https://docs.microsoft.com/'
+    },
+    {
+      name: 'Stack Overflow',
+      description: 'Stack Overflow is an open community for anyone that codes. We help you get answers to your toughest coding questions, share knowledge with your coworkers in private, and find your next dream job.',
+      link: 'https://stackoverflow.com/'
+    }
+  ],
+  Tools: [
+    {
+      name: 'Visual Studio Code',
+      description: 'Visual Studio Code is a streamlined code editor with support for development operations like debugging, task running, and version control. It aims to provide just the tools a developer needs for a quick code-build-debug cycle and leaves more complex workflows to fuller featured IDEs, such as Visual Studio IDE.',
+      link: 'https://code.visualstudio.com/'
+    },
+    {
+      name: 'WebStorm',
+      description: 'Use the full power of the modern JavaScript ecosystem – WebStorm’s got you covered! Enjoy the intelligent code completion, on-the-fly error detection, powerful navigation and refactoring for JavaScript, TypeScript, stylesheet languages, and all the most popular frameworks.',
+      link: 'https://www.jetbrains.com/webstorm/'
+    },
+    {
+      name: 'Next.js',
+      description: 'Production grade React applications that scale. The world\'s leading companies use Next.js to build server-rendered applications, static websites, and more.',
+      link: 'https://nextjs.org/'
+    },
+    {
+      name: 'Blazor',
+      description: 'Blazor is a feature of ASP.NET for building interactive web UIs using C# instead of JavaScript. It\'s real .NET running in the browser on WebAssembly.',
+      link: 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor'
+    }
+  ],
+  Services: [
+    {
+      name: 'ZEIT',
+      description: 'Deploy your website quickly, without having to manually configure DNS, SSL, CDN or hosting. Integrate with your favorite tools, and bring your entire team of developers and designers closer together.',
+      link: 'https://zeit.co/'
+    },
+    {
+      name: 'Let\'s Encrypt',
+      description: 'Let\'s Encrypt is a free, automated, and open Certificate Authority.',
+      link: 'https://letsencrypt.org/'
+    },
+    {
+      name: 'Google Cloud',
+      description: 'Tap into Google\'s world-class infrastructure and robust set of solutions to build, operate, and grow your business in today\'s complex, multi-cloud environment.',
+      link: 'https://cloud.google.com/'
+    }
+  ]
+}

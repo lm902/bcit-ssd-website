@@ -5,14 +5,17 @@ export default class PageEResources extends LitElement {
   render () {
     return html`
       <page-content>
-        <dl>
-        ${eResources.map(eResource => html`
-          <dt><a href="${eResources.link}">${eResource.name}</a></dt>
-          <dd>
-            ${eResource.description}
-          </dd>
+        ${Object.entries(eResources).map(category => html`
+          <h1>${category[0]}</h1>
+          <dl>
+            ${category[1].map(eResource => html`
+              <dt><a href="${eResource.link}">${eResource.name}</a></dt>
+              <dd>
+                ${eResource.description}
+              </dd>
+            `)}
+          </dl>
         `)}
-        </dl>
       </page-content>
     `
   }
@@ -26,6 +29,9 @@ export default class PageEResources extends LitElement {
       a {
         color: var(--primary-color);
         text-decoration: none;
+      }
+      h1 {
+        font-weight: normal;
       }
     `
   }
