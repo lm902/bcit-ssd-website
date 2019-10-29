@@ -30,6 +30,7 @@ export default class AppContent extends LitElement {
     const name = pages[window.location.hash.substr(3)].content
     console.log('Update content to ' + name)
     this.innerHTML = `<${name}></${name}>`
+    this.scrollTop = 0
   }
 }
 
