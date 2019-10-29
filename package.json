@@ -4,6 +4,7 @@
   "dependencies": {
     "@material/mwc-button": "^0.10.0",
     "@material/mwc-dialog": "^0.10.0",
+    "@material/mwc-fab": "^0.10.0",
     "@material/mwc-formfield": "^0.10.0",
     "@material/mwc-icon": "^0.10.0",
     "@material/mwc-radio": "^0.10.0",
@@ -16,7 +17,6 @@
     "polymer-cli": "^1.9.11"
   },
   "devDependencies": {
-    "@material/mwc-fab": "^0.10.0",
     "standard": "^14.3.1"
   },
   "scripts": {
