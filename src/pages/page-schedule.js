@@ -46,18 +46,26 @@ export default class PageSchedule extends LitElement {
   }
 
   toggleCalendarView () {
-    this.changeCalendarView(!this.calendarView)
+    this.calendarView = !this.calendarView
   }
 
-  changeCalendarView (target) {
-    console.log('Change calendar view to ' + target)
-    this.calendarView = target
+  set calendarView (value) {
+    console.log('Change calendar view to ' + value)
+    this._calendarView = value
     this.requestUpdate()
+  }
+
+  get calendarView () {
+    return this._calendarView
   }
 
   connectedCallback () {
     super.connectedCallback()
-    this.calendarView = true
+    if (window.innerWidth < 1000) {
+      this.calendarView = false
+    } else {
+      this.calendarView = true
+    }
     this.bindedResize = this.resize.bind(this)
     window.addEventListener('resize', this.bindedResize)
   }
@@ -69,7 +77,7 @@ export default class PageSchedule extends LitElement {
 
   resize () {
     if (window.innerWidth < 1000 && this.calendarView) {
-      this.changeCalendarView(false)
+      this.calendarView = false
     }
   }
 }
