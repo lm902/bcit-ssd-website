@@ -12,7 +12,7 @@ export default class AppLayout extends LitElement {
 
   connectedCallback () {
     super.connectedCallback()
-    window.app.actionRegistry.register(ActionRegistry.ActionType.BROWSER_NAVIGATION, this.toggleMenu.bind(this))
+    window.app.actionRegistry.register(ActionRegistry.ActionType.BROWSER_NAVIGATION, this.closeMenu.bind(this))
     window.app.actionRegistry.register(ActionRegistry.ActionType.MENU_BUTTON_INVOKE, this.toggleMenu.bind(this))
     window.app.actionRegistry.register(ActionRegistry.ActionType.GLOBAL_DIALOG_OPEN, this.dialogOpen.bind(this))
     window.app.actionRegistry.register(ActionRegistry.ActionType.GLOBAL_DIALOG_CLOSE, this.dialogClose.bind(this))
@@ -20,6 +20,10 @@ export default class AppLayout extends LitElement {
 
   toggleMenu () {
     this.shadowRoot.querySelector('nav').classList.toggle('show')
+  }
+
+  closeMenu () {
+    this.shadowRoot.querySelector('nav').classList.remove('show')
   }
 
   dialogOpen () {
